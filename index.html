@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Management System</title>
+    <style>
+        body {
+            background-image: url('img1.png');
+            background-size: 1000px;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Updated background color */
+            color: black;
+            font-display: dark;
+            font-weight: 200;
+            overflow: hidden; /* Prevent scrollbar flash during animations */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 150px auto; /* Center the container */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0; /* Initially hide the box */
+            background-color: rgba(255, 255, 255, 0.8); /* White translucent background */
+            transition: opacity 0.5s ease; /* Smooth transition for opacity */
+        }
+
+        .container:hover {
+            opacity: 1; /* Show the box on container hover */
+        }
+
+        h1 {
+            text-align: center;
+            color: black; /* Updated text color */
+            opacity: 0; /* Initially hide the text */
+            animation: fadeInUp 1s ease-out; /* Fade in animation for text */
+            animation-fill-mode: forwards; /* Keep the last keyframe state */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 40px;
+            text-align: center;
+            color: black;
+        }
+
+        li {
+            display: block; /* Display each link as a block */
+            margin: 15px 0; /* Add some vertical spacing between links */
+            opacity: 0; /* Initially hide the links */
+            animation: fadeInLeft 1s ease-out; /* Fade in animation for links */
+            animation-fill-mode: forwards; /* Keep the last keyframe state */
+        }
+
+        a {
+            text-decoration: none;
+            color: black; /* Updated link color */
+            font-size: 18px;
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Additional animation for the links */
+        .container:hover li {
+            opacity: 1; /* Show the links on container hover */
+        }
+
+        /* Additional animation for the text */
+        .container:hover h1 {
+            opacity: 1; /* Show the text on container hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1> Bank Management System</h1>
+    <ul>
+        <li><a href="customers.php">Customers</a></li>
+        <li><a href="transfer.php">Transfer Money</a></li>
+        <li><a href="withdraw.php">Withdraw Money</a></li>
+        <li><a href="deposit.php">Deposit Money</a></li> 
+        <li><a href="credit.php">High credit score</a></li>
+        <li><a href="add-customer.php">Add Customer</a></li>
+    </ul>
+</div>
+
+</body>
+</html>
